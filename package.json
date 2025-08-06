@@ -5,9 +5,12 @@
 	"main": "server.js",
 	"scripts": {
 		"dev": "cross-env NODE_ENV=development nodemon backend/server.js",
-		"start": "cross-env NODE_ENV=production node backend/server.js",
-		"build": "npm install && npm install --prefix frontend && npm run build --prefix frontend",
-		"render-build": "npm install && npm install --prefix frontend && npm run build --prefix frontend"
+		"start": "node backend/server.js",
+		"build": "npm ci && npm ci --prefix frontend && npm run build --prefix frontend",
+		"render-build": "npm ci && npm ci --prefix frontend && npm run build --prefix frontend"
+	},
+	"engines": {
+		"node": ">=18.0.0"
 	},
 	"type": "module",
 	"keywords": [],
